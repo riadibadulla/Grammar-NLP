@@ -1,0 +1,12 @@
+S -> NP VP
+NP -> ProperNoun
+
+VP -> VP ARG
+VP -> V
+ARG -> NP
+
+V -> 'carry'
+V -> 'carries'
+V -> 'carried'
+ProperNoun -> 'Stan'
+ProperNoun -> 'Ollie'
