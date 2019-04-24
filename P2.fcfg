@@ -1,8 +1,9 @@
 S -> NP VP
+S -> S S
 S -> Conj S S
-VP -> VP S
-VP -> VP NP
-VP -> VP PP
+S -> ADV AUX S
+VP -> VP NPflight
+VP -> VP PPflight
 VP -> V
 VP -> VP Nominal
 VP -> ADV VP
@@ -18,15 +19,15 @@ V -> 'wears'
 V -> 'sneezes' | 'sneezed'
 V -> 'carry'| 'carried'
 V -> 'gave'
-V -> 'walks'
+V -> 'walks' | 'walk'
 V -> 'thinks'
 V -> 'rolls'
 
 ProperNoun -> 'Stan' | 'Ollie'
 Noun -> 'suit' | 'house' | 'piano' | 'wheels' | 'stairs'
 Adj -> 'grey' | 'large' | 'heavy'
-ADV -> 'always'
+ADV -> 'always' | 'when'
 Det -> 'a' | 'the'
 P -> 'in' | 'with' | 'up' | 'down'
 Conj -> 'and'| 'when'
-
+AUX -> 'does'
