@@ -1,19 +1,19 @@
 S -> NP VP
-NP -> ProperNoun
+VP -> V NP
+VP -> V PP
+NP -> Det Nominal | Det NP
+PP -> P NP
+Nominal -> Adj NP
+NP -> Noun | ProperNoun
 
-VP -> VP ARG
 VP -> V
-ARG -> NP
 
-V -> 'carry'
-V -> 'carries'
-V -> 'carried'
 V -> 'wears'
-V -> 'sneezes'
+V -> 'sneezes' | 'sneezed'
 
-ProperNoun -> 'Stan'
-ProperNoun -> 'Ollie'
-ProperNoun -> 'suit'
+ProperNoun -> 'Stan' | 'Ollie'
+Noun -> 'suit' | 'house'
 Adj -> 'grey'
-Det -> 'a'
+Det -> 'a' | 'the'
+P -> 'in'
 

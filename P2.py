@@ -1,6 +1,8 @@
 import nltk
 from nltk import FeatureChartParser
+import os
 
+os.system('clear')
 fcfg = nltk.data.load('P2.fcfg')
 parser = FeatureChartParser(fcfg)
 
