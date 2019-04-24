@@ -8,5 +8,12 @@ ARG -> NP
 V -> 'carry'
 V -> 'carries'
 V -> 'carried'
+V -> 'wears'
+V -> 'sneezes'
+
 ProperNoun -> 'Stan'
 ProperNoun -> 'Ollie'
+ProperNoun -> 'suit'
+Adj -> 'grey'
+Det -> 'a'
+
