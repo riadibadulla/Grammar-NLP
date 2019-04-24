@@ -1,6 +1,8 @@
 S -> NP VP
+VP -> VP S
 VP -> V NP
 VP -> V PP | VP PP
+VP -> V
 VP -> VP Nominal
 VP -> ADV V
 NP -> Det Nominal | Det NP
@@ -17,6 +19,7 @@ V -> 'sneezes' | 'sneezed'
 V -> 'carry'| 'carried'
 V -> 'gave'
 V -> 'walks'
+V -> 'thinks'
 
 ProperNoun -> 'Stan' | 'Ollie'
 Noun -> 'suit' | 'house' | 'piano' | 'wheels' | 'stairs'
