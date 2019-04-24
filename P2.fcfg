@@ -1,9 +1,11 @@
 S -> NP VP
 VP -> V NP
 VP -> V PP
+VP -> VP Nominal
 NP -> Det Nominal | Det NP
 PP -> P NP
 Nominal -> Adj NP
+Nominal -> NP PP
 NP -> Noun | ProperNoun
 NP -> NP Conj NP
 VP -> V
@@ -11,11 +13,12 @@ VP -> V
 V -> 'wears'
 V -> 'sneezes' | 'sneezed'
 V -> 'carry'
+V -> 'gave'
 
 ProperNoun -> 'Stan' | 'Ollie'
-Noun -> 'suit' | 'house' | 'piano'
+Noun -> 'suit' | 'house' | 'piano' | 'wheels'
 Adj -> 'grey'
 Det -> 'a' | 'the'
-P -> 'in'
+P -> 'in' | 'with'
 Conj -> 'and'
 
