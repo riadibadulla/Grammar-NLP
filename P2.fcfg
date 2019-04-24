@@ -5,15 +5,17 @@ NP -> Det Nominal | Det NP
 PP -> P NP
 Nominal -> Adj NP
 NP -> Noun | ProperNoun
-
+NP -> NP Conj NP
 VP -> V
 
 V -> 'wears'
 V -> 'sneezes' | 'sneezed'
+V -> 'carry'
 
 ProperNoun -> 'Stan' | 'Ollie'
-Noun -> 'suit' | 'house'
+Noun -> 'suit' | 'house' | 'piano'
 Adj -> 'grey'
 Det -> 'a' | 'the'
 P -> 'in'
+Conj -> 'and'
 
