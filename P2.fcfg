@@ -1,4 +1,4 @@
-S[NUM=?n] -> NP[NUM=?n] VP[NUM=?n]
+S[NUM=?n] -> NP[NUM=?n, PER=?n] VP[NUM=?n, PER=?n]
 S[NUM=?n] -> S[NUM=?n] S
 S[NUM=?n] -> Conj S[NUM=?n]
 S[NUM=?n] -> ADV AUX[NUM=?n] S[NUM=?n]
@@ -10,28 +10,34 @@ VP[NUM=?n] -> ADV VP[NUM=?n]
 NP[NUM=?n] -> Det[NUM=?n] Nominal
 NP[NUM=?n] -> Det[NUM=?n] NP[NUM=?n]
 NP[NUM=?n] -> Noun[NUM=?n] | ProperNoun[NUM=?n]
-NP[NUM=?n] -> NP[NUM=?n] Conj NP[NUM=?n]
+NP[NUM=pl] -> NP Conj NP
 PP[NUM=?n] -> P NP[NUM=?n]
-Nominal[NUM=?n] -> Adj NP[NUM=?n]
-Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
-Nominal[NUM=?n] -> NP[NUM=?n] PP
 
 
-V[NUM=sg] -> 'wears'
-V[NUM=sg] -> 'sneezes' | 'sneezed' | 'sneeze'
-V[NUM=pl] -> 'sneezed' | 'sneeze'
-V[NUM=pl] -> 'carry'| 'carried'
-V[NUM=sg] -> 'carry'| 'carried'
-V[NUM=pl] -> 'gave'
-V[NUM=sg] -> 'gave'
-V[NUM=sg]-> 'walks' | 'walk'
-V[NUM=pl] -> 'walk'
-V[NUM=sg] -> 'thinks'
-V[NUM=sg] -> 'rolls'
+V[NUM=sg, TENSE=pres, PER=3] -> 'wears'
 
-ProperNoun[NUM=sg] -> 'Stan' | 'Ollie'
-Noun[NUM=sg] -> 'suit' | 'house' | 'piano'
-Noun[NUM=pl] -> 'wheels' | 'stairs'
+V[NUM=sg, TENSE=pres, PER=3] -> 'sneezes' 
+V[NUM=sg, TENSE=pres, PER=1] ->'sneeze'
+V[NUM=sg, TENSE=past, PER=3] ->  'sneezed'
+V[NUM=pl, TENSE=past, PER=3] -> 'sneezed'
+V[NUM=pl, TENSE=pres, PER=1] -> 'sneeze'
+
+V[NUM=pl, TENSE=pres, PER=3] -> 'carry'
+V[NUM=pl, TENSE=past, PER=3] -> 'carried'
+V[NUM=sg, TENSE=pres, PER=3] -> 'carry'
+V[NUM=sg, TENSE=past, PER=3] -> 'carried'
+
+V[NUM=pl, TENSE=past, PER=3] -> 'gave'
+V[NUM=sg, TENSE=past, PER=3] -> 'gave'
+V[NUM=sg, TENSE=pres, PER=1]->  'walk'
+V[NUM=sg, TENSE=pres, PER=3]-> 'walks'
+V[NUM=pl, TENSE=pres, PER=3] -> 'walk'
+V[NUM=sg, TENSE=pres, PER=3] -> 'thinks'
+V[NUM=sg, TENSE=pres, PER=3] -> 'rolls'
+
+ProperNoun[NUM=sg, PER=3] -> 'Stan' | 'Ollie'
+Noun[NUM=sg, PER=3] -> 'suit' | 'house' | 'piano'
+Noun[NUM=pl, PER=3] -> 'wheels' | 'stairs'
 Adj -> 'grey' | 'large' | 'heavy'
 ADV -> 'always' | 'when'
 Det[NUM=sg] -> 'a' | 'the'
@@ -39,4 +45,4 @@ Det[NUM=pl] ->'the'
 P -> 'in' | 'with' | 'up' | 'down'
 Conj -> 'and'| 'when'
 AUX[NUM=sg] -> 'does' | 'do'
-AUX[NUM=sg] -> 'do'
+AUX[NUM=pl] -> 'do'
