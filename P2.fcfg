@@ -2,9 +2,10 @@ S[NUM=?n] -> NP[NUM=?n, PER=?n] VP[NUM=?n, PER=?n]
 S[NUM=?n] -> S[NUM=?n] S
 S[NUM=?n] -> Conj S[NUM=?n]
 S[NUM=?n] -> ADV AUX[NUM=?n] S[NUM=?n]
-VP[NUM=?n] -> VP[NUM=?n] NP
 VP[NUM=?n] -> VP[NUM=?n] PP
-VP[NUM=?n] -> V[NUM=?n]
+VP[NUM=?n] -> TV[NUM=?n] NP
+VP[NUM=?n] -> IV[NUM=?n]
+
 VP[NUM=?n] -> VP[NUM=?n] Nominal
 VP[NUM=?n] -> ADV VP[NUM=?n]
 NP[NUM=?n] -> Det[NUM=?n] Nominal
@@ -13,27 +14,30 @@ NP[NUM=?n] -> Noun[NUM=?n] | ProperNoun[NUM=?n]
 NP[NUM=pl] -> NP Conj NP
 PP[NUM=?n] -> P NP[NUM=?n]
 
+Nominal[NUM=?n] -> Adj NP[NUM=?n]
+Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
+Nominal[NUM=?n] -> NP[NUM=?n] PP
 
-V[NUM=sg, TENSE=pres, PER=3] -> 'wears'
+TV[NUM=sg, TENSE=pres, PER=3] -> 'wears'
 
-V[NUM=sg, TENSE=pres, PER=3] -> 'sneezes' 
-V[NUM=sg, TENSE=pres, PER=1] ->'sneeze'
-V[NUM=sg, TENSE=past, PER=3] ->  'sneezed'
-V[NUM=pl, TENSE=past, PER=3] -> 'sneezed'
-V[NUM=pl, TENSE=pres, PER=1] -> 'sneeze'
+IV[NUM=sg, TENSE=pres, PER=3] -> 'sneezes' 
+IV[NUM=sg, TENSE=pres, PER=1] ->'sneeze'
+IV[NUM=sg, TENSE=past, PER=3] ->  'sneezed'
+IV[NUM=pl, TENSE=past, PER=3] -> 'sneezed'
+IV[NUM=pl, TENSE=pres, PER=1] -> 'sneeze'
 
-V[NUM=pl, TENSE=pres, PER=3] -> 'carry'
-V[NUM=pl, TENSE=past, PER=3] -> 'carried'
-V[NUM=sg, TENSE=pres, PER=3] -> 'carry'
-V[NUM=sg, TENSE=past, PER=3] -> 'carried'
+TV[NUM=pl, TENSE=pres, PER=3] -> 'carry'
+TV[NUM=pl, TENSE=past, PER=3] -> 'carried'
+TV[NUM=sg, TENSE=pres, PER=3] -> 'carry'
+TV[NUM=sg, TENSE=past, PER=3] -> 'carried'
 
-V[NUM=pl, TENSE=past, PER=3] -> 'gave'
-V[NUM=sg, TENSE=past, PER=3] -> 'gave'
-V[NUM=sg, TENSE=pres, PER=1]->  'walk'
-V[NUM=sg, TENSE=pres, PER=3]-> 'walks'
-V[NUM=pl, TENSE=pres, PER=3] -> 'walk'
-V[NUM=sg, TENSE=pres, PER=3] -> 'thinks'
-V[NUM=sg, TENSE=pres, PER=3] -> 'rolls'
+TV[NUM=pl, TENSE=past, PER=3] -> 'gave'
+TV[NUM=sg, TENSE=past, PER=3] -> 'gave'
+IV[NUM=sg, TENSE=pres, PER=1]->  'walk'
+IV[NUM=sg, TENSE=pres, PER=3]-> 'walks'
+IV[NUM=pl, TENSE=pres, PER=3] -> 'walk'
+IV[NUM=sg, TENSE=pres, PER=3] -> 'thinks'
+IV[NUM=sg, TENSE=pres, PER=3] -> 'rolls'
 
 ProperNoun[NUM=sg, PER=3] -> 'Stan' | 'Ollie'
 Noun[NUM=sg, PER=3] -> 'suit' | 'house' | 'piano'
