@@ -1,16 +1,16 @@
-S[NUM=?n] -> NP[NUM=?n, PER=?n] VP[NUM=?n, PER=?n]
+S[NUM=?n, PER=?p] -> NP[NUM=?n, PER=?p] VP[NUM=?n, PER=?p]
 S[NUM=?n] -> S[NUM=?n] S
 S[NUM=?n] -> Conj S[NUM=?n]
 S[NUM=?n] -> ADV AUX[NUM=?n] S[NUM=?n]
-VP[NUM=?n] -> VP[NUM=?n] PP
-VP[NUM=?n] -> V[NUM=?n, SUBCAT=trans] NP
-VP[NUM=?n] -> V[NUM=?n, SUBCAT=intrans]
+VP[NUM=?n, PER=?p] -> VP[NUM=?n, PER=?p] PP
+VP[NUM=?n, TENSE=?t, PER=?p] -> V[NUM=?n, TENSE=?t, PER=?p, SUBCAT=trans] NP
+VP[NUM=?n, TENSE=?t, PER=?p] -> V[NUM=?n, TENSE=?t, PER=?p, SUBCAT=intrans]
 
-VP[NUM=?n] -> VP[NUM=?n] Nominal
-VP[NUM=?n] -> ADV VP[NUM=?n]
+VP[NUM=?n, PER=?p] -> VP[NUM=?n, PER=?p] Nominal
+VP[NUM=?n, PER=?p] -> ADV VP[NUM=?n, PER=?p]
 NP[NUM=?n] -> Det[NUM=?n] Nominal
-NP[NUM=?n] -> Det[NUM=?n] NP[NUM=?n]
-NP[NUM=?n] -> Noun[NUM=?n] | ProperNoun[NUM=?n]
+NP[NUM=?n, PER=?p] -> Det[NUM=?n] NP[NUM=?n, PER=?p]
+NP[NUM=?n, PER=?p] -> Noun[NUM=?n, PER=?p] | ProperNoun[NUM=?n, PER=?p]
 NP[NUM=pl] -> NP Conj NP
 PP[NUM=?n] -> P NP[NUM=?n]
 
