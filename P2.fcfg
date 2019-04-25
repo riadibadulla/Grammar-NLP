@@ -1,9 +1,9 @@
 S -> NP VP
 S -> S S
-S -> Conj S S
+S -> Conj S
 S -> ADV AUX S
-VP -> VP NPflight
-VP -> VP PPflight
+VP -> VP NP
+VP -> VP PP
 VP -> V
 VP -> VP Nominal
 VP -> ADV VP
@@ -16,7 +16,7 @@ NP -> Noun | ProperNoun
 NP -> NP Conj NP
 
 V -> 'wears'
-V -> 'sneezes' | 'sneezed'
+V -> 'sneezes' | 'sneezed' | 'sneeze'
 V -> 'carry'| 'carried'
 V -> 'gave'
 V -> 'walks' | 'walk'
@@ -30,4 +30,4 @@ ADV -> 'always' | 'when'
 Det -> 'a' | 'the'
 P -> 'in' | 'with' | 'up' | 'down'
 Conj -> 'and'| 'when'
-AUX -> 'does'
+AUX -> 'does' | 'do'
