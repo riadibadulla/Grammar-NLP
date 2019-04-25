@@ -30,6 +30,7 @@ V[NUM=pl, TENSE=pres, PER=1, SUBCAT=intrans] -> 'sneeze'
 V[NUM=pl, TENSE=pres, PER=3, SUBCAT=trans] -> 'carry'
 V[NUM=pl, TENSE=past, PER=3, SUBCAT=trans] -> 'carried'
 V[NUM=sg, TENSE=past, PER=3, SUBCAT=trans] -> 'carried'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=trans] -> 'carries'
 
 V[NUM=pl, TENSE=past, PER=3, SUBCAT=trans] -> 'gave'
 V[NUM=sg, TENSE=past, PER=3, SUBCAT=trans] -> 'gave'
