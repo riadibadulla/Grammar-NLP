@@ -1,7 +1,8 @@
 S[NUM=?n, PER=?p] -> NP[NUM=?n, PER=?p] VP[NUM=?n, PER=?p]
 S[NUM=?n] -> S[NUM=?n] S
 S[NUM=?n] -> Conj S[NUM=?n]
-S[NUM=?n] -> ADV AUX[NUM=?n] S[NUM=?n]
+S[NUM=?n] -> ADV AUX[NUM=?n, PER=?p] NP[NUM=?n, PER=?p] VP
+
 VP[NUM=?n, PER=?p] -> VP[NUM=?n, PER=?p] PP
 VP[NUM=?n, TENSE=?t, PER=?p] -> V[NUM=?n, TENSE=?t, PER=?p, SUBCAT=trans] NP
 VP[NUM=?n, TENSE=?t, PER=?p] -> V[NUM=?n, TENSE=?t, PER=?p, SUBCAT=intrans]
@@ -28,14 +29,12 @@ V[NUM=pl, TENSE=pres, PER=1, SUBCAT=intrans] -> 'sneeze'
 
 V[NUM=pl, TENSE=pres, PER=3, SUBCAT=trans] -> 'carry'
 V[NUM=pl, TENSE=past, PER=3, SUBCAT=trans] -> 'carried'
-V[NUM=sg, TENSE=pres, PER=3, SUBCAT=trans] -> 'carry'
 V[NUM=sg, TENSE=past, PER=3, SUBCAT=trans] -> 'carried'
 
 V[NUM=pl, TENSE=past, PER=3, SUBCAT=trans] -> 'gave'
 V[NUM=sg, TENSE=past, PER=3, SUBCAT=trans] -> 'gave'
 V[NUM=sg, TENSE=pres, PER=1, SUBCAT=intrans]->  'walk'
 V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans]-> 'walks'
-V[NUM=pl, TENSE=pres, PER=3, SUBCAT=intrans] -> 'walk'
 V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans] -> 'thinks'
 V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans] -> 'rolls'
 
@@ -48,5 +47,5 @@ Det[NUM=sg] -> 'a' | 'the'
 Det[NUM=pl] ->'the'
 P -> 'in' | 'with' | 'up' | 'down'
 Conj -> 'and'| 'when'
-AUX[NUM=sg] -> 'does' | 'do'
-AUX[NUM=pl] -> 'do'
+AUX[NUM=sg,PER=3] -> 'does'
+AUX[NUM=pl,PER=1] -> 'do'
