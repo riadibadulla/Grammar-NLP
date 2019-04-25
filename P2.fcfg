@@ -3,8 +3,8 @@ S[NUM=?n] -> S[NUM=?n] S
 S[NUM=?n] -> Conj S[NUM=?n]
 S[NUM=?n] -> ADV AUX[NUM=?n] S[NUM=?n]
 VP[NUM=?n] -> VP[NUM=?n] PP
-VP[NUM=?n] -> TV[NUM=?n] NP
-VP[NUM=?n] -> IV[NUM=?n]
+VP[NUM=?n] -> V[NUM=?n, SUBCAT=trans] NP
+VP[NUM=?n] -> V[NUM=?n, SUBCAT=intrans]
 
 VP[NUM=?n] -> VP[NUM=?n] Nominal
 VP[NUM=?n] -> ADV VP[NUM=?n]
@@ -18,26 +18,26 @@ Nominal[NUM=?n] -> Adj NP[NUM=?n]
 Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
 Nominal[NUM=?n] -> NP[NUM=?n] PP
 
-TV[NUM=sg, TENSE=pres, PER=3] -> 'wears'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=trans] -> 'wears'
 
-IV[NUM=sg, TENSE=pres, PER=3] -> 'sneezes' 
-IV[NUM=sg, TENSE=pres, PER=1] ->'sneeze'
-IV[NUM=sg, TENSE=past, PER=3] ->  'sneezed'
-IV[NUM=pl, TENSE=past, PER=3] -> 'sneezed'
-IV[NUM=pl, TENSE=pres, PER=1] -> 'sneeze'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans] -> 'sneezes' 
+V[NUM=sg, TENSE=pres, PER=1, SUBCAT=intrans] ->'sneeze'
+V[NUM=sg, TENSE=past, PER=3, SUBCAT=intrans] ->  'sneezed'
+V[NUM=pl, TENSE=past, PER=3, SUBCAT=intrans] -> 'sneezed'
+V[NUM=pl, TENSE=pres, PER=1, SUBCAT=intrans] -> 'sneeze'
 
-TV[NUM=pl, TENSE=pres, PER=3] -> 'carry'
-TV[NUM=pl, TENSE=past, PER=3] -> 'carried'
-TV[NUM=sg, TENSE=pres, PER=3] -> 'carry'
-TV[NUM=sg, TENSE=past, PER=3] -> 'carried'
+V[NUM=pl, TENSE=pres, PER=3, SUBCAT=trans] -> 'carry'
+V[NUM=pl, TENSE=past, PER=3, SUBCAT=trans] -> 'carried'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=trans] -> 'carry'
+V[NUM=sg, TENSE=past, PER=3, SUBCAT=trans] -> 'carried'
 
-TV[NUM=pl, TENSE=past, PER=3] -> 'gave'
-TV[NUM=sg, TENSE=past, PER=3] -> 'gave'
-IV[NUM=sg, TENSE=pres, PER=1]->  'walk'
-IV[NUM=sg, TENSE=pres, PER=3]-> 'walks'
-IV[NUM=pl, TENSE=pres, PER=3] -> 'walk'
-IV[NUM=sg, TENSE=pres, PER=3] -> 'thinks'
-IV[NUM=sg, TENSE=pres, PER=3] -> 'rolls'
+V[NUM=pl, TENSE=past, PER=3, SUBCAT=trans] -> 'gave'
+V[NUM=sg, TENSE=past, PER=3, SUBCAT=trans] -> 'gave'
+V[NUM=sg, TENSE=pres, PER=1, SUBCAT=intrans]->  'walk'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans]-> 'walks'
+V[NUM=pl, TENSE=pres, PER=3, SUBCAT=intrans] -> 'walk'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans] -> 'thinks'
+V[NUM=sg, TENSE=pres, PER=3, SUBCAT=intrans] -> 'rolls'
 
 ProperNoun[NUM=sg, PER=3] -> 'Stan' | 'Ollie'
 Noun[NUM=sg, PER=3] -> 'suit' | 'house' | 'piano'
