@@ -1,33 +1,42 @@
-S -> NP VP
-S -> S S
-S -> Conj S
-S -> ADV AUX S
-VP -> VP NP
-VP -> VP PP
-VP -> V
-VP -> VP Nominal
-VP -> ADV VP
-NP -> Det Nominal | Det NP
-PP -> P NP
-Nominal -> Adj NP
-Nominal -> Adj Nominal
-Nominal -> NP PP
-NP -> Noun | ProperNoun
-NP -> NP Conj NP
+S[NUM=?n] -> NP[NUM=?n] VP[NUM=?n]
+S[NUM=?n] -> S[NUM=?n] S
+S[NUM=?n] -> Conj S[NUM=?n]
+S[NUM=?n] -> ADV AUX[NUM=?n] S[NUM=?n]
+VP[NUM=?n] -> VP[NUM=?n] NP
+VP[NUM=?n] -> VP[NUM=?n] PP
+VP[NUM=?n] -> V[NUM=?n]
+VP[NUM=?n] -> VP[NUM=?n] Nominal
+VP[NUM=?n] -> ADV VP[NUM=?n]
+NP[NUM=?n] -> Det[NUM=?n] Nominal
+NP[NUM=?n] -> Det[NUM=?n] NP[NUM=?n]
+NP[NUM=?n] -> Noun[NUM=?n] | ProperNoun[NUM=?n]
+NP[NUM=?n] -> NP[NUM=?n] Conj NP[NUM=?n]
+PP[NUM=?n] -> P NP[NUM=?n]
+Nominal[NUM=?n] -> Adj NP[NUM=?n]
+Nominal[NUM=?n] -> Adj Nominal[NUM=?n]
+Nominal[NUM=?n] -> NP[NUM=?n] PP
 
-V -> 'wears'
-V -> 'sneezes' | 'sneezed' | 'sneeze'
-V -> 'carry'| 'carried'
-V -> 'gave'
-V -> 'walks' | 'walk'
-V -> 'thinks'
-V -> 'rolls'
 
-ProperNoun -> 'Stan' | 'Ollie'
-Noun -> 'suit' | 'house' | 'piano' | 'wheels' | 'stairs'
+V[NUM=sg] -> 'wears'
+V[NUM=sg] -> 'sneezes' | 'sneezed' | 'sneeze'
+V[NUM=pl] -> 'sneezed' | 'sneeze'
+V[NUM=pl] -> 'carry'| 'carried'
+V[NUM=sg] -> 'carry'| 'carried'
+V[NUM=pl] -> 'gave'
+V[NUM=sg] -> 'gave'
+V[NUM=sg]-> 'walks' | 'walk'
+V[NUM=pl] -> 'walk'
+V[NUM=sg] -> 'thinks'
+V[NUM=sg] -> 'rolls'
+
+ProperNoun[NUM=sg] -> 'Stan' | 'Ollie'
+Noun[NUM=sg] -> 'suit' | 'house' | 'piano'
+Noun[NUM=pl] -> 'wheels' | 'stairs'
 Adj -> 'grey' | 'large' | 'heavy'
 ADV -> 'always' | 'when'
-Det -> 'a' | 'the'
+Det[NUM=sg] -> 'a' | 'the'
+Det[NUM=pl] ->'the'
 P -> 'in' | 'with' | 'up' | 'down'
 Conj -> 'and'| 'when'
-AUX -> 'does' | 'do'
+AUX[NUM=sg] -> 'does' | 'do'
+AUX[NUM=sg] -> 'do'
